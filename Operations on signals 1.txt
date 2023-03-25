@@ -1,0 +1,58 @@
+clc; 
+clear all; 
+close all; 
+%plot 2hz sinusodial signal 
+t=0:.01:1; 
+f1=2; 
+A=8;
+s1=A*sin(2*pi*f1*t); 
+figure, subplot(2,1,1),plot(t,s1,'r'); 
+grid; 
+xlabel('---time'); 
+ylabel('amplitude');
+title('signal 1'); 
+%plot 10hz sinusodial signal 
+t=0:.01:1; 
+f2=10;
+A=6; 
+s2=A*sin(2*pi*f2*t); 
+subplot(2,1,2),plot(t,s2,'g');
+grid; 
+xlabel('---time'); 
+ylabel('amplitude');
+title('signal 2');
+%signal 
+y=s1+s2; 
+figure, subplot(2,1,1),
+plot(t,y);
+grid; 
+xlabel('-->time'); 
+ylabel('amplitude');
+title('the summed signal s1+s2'); 
+%signal subtraction
+y=s1-s2; 
+subplot(2,1,2),plot(t,y,'r');
+grid; 
+xlabel('-->time'); 
+ylabel('amplitude'); 
+title('the subtracted signal s1-s2'); 
+%signal multiplication element by element 
+y=s1.*s2; 
+figure, plot(t,y,'g') ; 
+xlabel('-->time');
+ylabel('amplitude') ; 
+title('the multiplied signal s1.*s2'); 
+%Amplitude scaling of signal s1 
+alpha1= 3; 
+y=alpha1*s1;
+figure, subplot(2,1,1),plot(t,y); 
+xlabel('-->time'); 
+ylabel('amplitude') ; 
+title('the signal s1 amplitude is multiplied by alpa'); 
+%amplitude scaling of signal s2
+alpha2=1/2; 
+y=alpha2*s2; 
+subplot(2,1,2),plot(t,y) ;
+xlabel('-->time'); 
+ylabel('amplitude') ;
+title ('the signal s2 is amplitude scaled by 1/alpha');
