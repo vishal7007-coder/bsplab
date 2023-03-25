@@ -1,0 +1,8 @@
+clc; 
+close all;
+clear all; 
+%b= input('enter the numerator coefficients')
+%a= input('enter the denominator coefficients') 
+b=[1 2 3 4] 
+a=[1 2 1 1 ] 
+zplane(b,a);
