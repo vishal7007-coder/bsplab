@@ -1,0 +1,35 @@
+clc; 
+Clear all; 
+Close all;
+% A row vector can be created in MATLAB as follows: 
+a = [12, 14, 63];
+b= [13, 12,-6];
+% A column vector can be created in MATLAB as follows: 
+a1= [14; -32; 19];
+b1 = [13; 45; -2];
+%Addition of two vectors
+y=a+b;
+y1=a1+b1;
+disp('the addition value is');
+disp(y); 
+disp(y1);
+%Subtraction of two vectors
+x=a-b; 
+x1=a1-b1;
+disp('the subtraction value is'); 
+disp(x); 
+disp(x1);
+%Multiplication of two vectors
+z=a*b1; 
+z1=a1*b; 
+disp('the multiplication value is'); 
+disp(z);
+disp(z1);
+%Division of a vector by a scalar value 
+r=a/2; 
+disp('the matrix division by a value 2 is'); 
+disp(r); 
+%Transpose of a vector
+p=a'; 
+disp('the transpose of matrix a is');
+disp(p);
