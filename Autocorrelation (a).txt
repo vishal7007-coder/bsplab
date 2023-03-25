@@ -1,0 +1,46 @@
+clc
+clear all;
+xn = input('Enter the sequence x(n) = ');
+n = 0:length(xn)-1;
+[rxx,l] = xcorr(xn);
+disp('auto correlation of given sequence: '); 
+disp(rxx);
+subplot(2,1,1);
+stem(n,xn);
+xlabel('----> n');
+ylabel('----> x(n)');
+title('Input sequence');
+subplot(2,1,2);
+stem(l,rxx);
+xlabel('----> lag');
+ylabel('----> rxx(l)');
+title('Auto correlation');
+%Verification of 1st Property
+r1xx=fliplr(rxx);
+if(r1xx==rxx)
+disp('rxx is Symmetric : First property is verified');
+else
+disp('rxx is Not symmetric : First property is not verified');
+end
+%Verification of 2nd Property
+m=max(rxx);
+N = length(xn);
+if(m==(rxx(N)))
+disp('Maximum at origin 2nd property is verified');
+else
+disp('Maximum is not at origin 2nd property is not verified');
+end
+%Verification of 3rd property
+en=0.0;
+for i=1:N
+y=(xn(i)*xn(i));
+en=en+y;
+end
+disp('energy of the sequence-');
+disp(en);
+disp(rxx(N));
+if(en==int8(rxx(N)))
+disp('Energy property is verified')
+else
+disp('energy property is not verified')
+end
