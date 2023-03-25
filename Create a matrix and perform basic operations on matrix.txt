@@ -1,0 +1,44 @@
+clc; 
+clear all; 
+close all;
+a=input ('enter the first matrix a'); 
+b=input ('enter the second matrix b');
+%Addition of two matrices
+y=a+b; 
+disp('the addition value is');
+disp(y); 
+%Subtraction of two matrices
+x=a-b; 
+disp('the subtraction value is'); 
+disp(x); 
+%Multiplication of two matrices 
+z=a*b; 
+disp('the multiplication value is'); 
+disp(z);
+%Multiplication of two matrices element by element 
+z=a.*b; 
+disp('the multiplication value is'); 
+disp(z);
+%Division of a matrix by a scalar value 
+r=a/2; 
+disp('the matrix division by a value 2 is'); 
+disp(r); 
+%Transpose of a matrix 
+p=a'; 
+disp('the transpose of matrix a is');
+disp(p); 
+%Inverse of matrix 
+q=inv(a); 
+disp('the inverse of matrix a is'); 
+disp(q); 
+%Determinant of a matrix 
+r=det(a); 
+disp('the determinant of matrix a is');
+disp(r);
+% Creating a matrix of size 3X3
+A1=[1,2,3;4,5,6;7,8,9]
+%Here we extract column 2 of the matrix and make a column vector: 
+col_two=A1 (:, 2)
+%Here we extract row 2 of the matrix and make a row vector. Note that the 2:2 
+specifies the second row and the 1:3 specifies which columns of the row. 
+Rowvec=A1 (2: 2, 1:3)
