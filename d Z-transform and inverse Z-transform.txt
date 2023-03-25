@@ -1,0 +1,23 @@
+clc; 
+clear all;
+close all; 
+x=[1 2 3 4];
+n=length(x); 
+b=0;
+y=sym('z');
+for i=1:n
+b=b+x(i)*y^(i-1);
+end
+disp(b);
+% To compute the Inverse Z transform
+syms z;
+F=(z^3+2*z^2+3*z+4)/(z^3);
+f=iztrans(F); 
+disp('X(Z)');
+disp(f); 
+Results;
+The Z transform for x[n] = [1 2 3 4] is 
+4*z^3 + 3*z^2 + 2*z + 1
+The Inverse Z-transform of F= (z^3+2*z^2+3*z+4)/ (z^3) is 
+X(Z)=2*kroneckerDelta(n - 1, 0) + 3*kroneckerDelta(n - 2, 0) + 4*kroneckerDelta(n - 3, 0) + 
+kroneckerDelta(n, 0)
