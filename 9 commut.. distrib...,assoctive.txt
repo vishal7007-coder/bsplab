@@ -1,0 +1,48 @@
+% Commutative Property
+x1=input ('Enter first sequence'); 
+x2=input ('Enter second sequence'); 
+y=conv(x1, x2);
+disp('linear con of x1 & x2 is y='); 
+disp(y);
+y1=conv(x2, x1);
+disp('linear con of x2 & x1 is y1=');
+disp(y1);
+if(y==y1)
+disp('Commutative property is satisfied');
+else
+disp('Commutative property not satisfied');
+end
+% Associative Property
+x1=input ('Enter first sequence'); 
+x2=input ('Enter second sequence'); 
+x3=input('Enter third sequence');
+y=conv(x1, x2);
+y1=conv(y, x3)
+disp('linear con of (x1*x2)*x3 is y1='); 
+disp(y1);
+y2=conv(x2, x3);
+y3=conv(x1, y2);
+disp('linear con of x1*(x2*x3) is y3=');
+disp(y3);
+if(y1==y3)
+disp('Associative property is satisfied');
+else
+disp('Associative property not satisfied');
+end
+x1=input ('Enter first sequence'); 
+x2=input ('Enter second sequence'); 
+x3=input('Enter third sequence');
+y=x1+ x2;
+y1=conv(x3, y);
+disp('linear con of x3*(x1+x2) is y1='); 
+disp(y1);
+y2=conv(x3, x1);
+y3=conv(x3, x2);
+y4=y2+y3;
+disp('linear con of x3*x1+ x3*x2 is y4=');
+disp(y4);
+if(y1==y4)
+disp('Distributive property is satisfied');
+else
+disp('Distributive property not satisfied');
+end
